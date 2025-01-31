@@ -1,0 +1,69 @@
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    position: relative;
+    font-family: 'Montsserat';
+}
+
+h1, h2, h3, h4, h5, h6, p, span {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-weight: normal;
+    line-height: normal;
+    text-transform: none;
+  }
+
+  .container {
+    width: 100%;         /* O container ocupa toda a largura disponível */
+    max-width: 1200px;   /* Largura máxima do container */
+    margin: 0 auto;      /* Centraliza o container horizontalmente */
+    padding: 0 20px;     /* Adiciona um espaço interno de 20px nas laterais */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura total */
+  }
+  
+  
+.c-header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 2rem 0;
+
+    .container{
+        display: flex ;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo{
+            height: 4rem;
+            object-fit: contain;
+        }
+    }
+}
+
+.c-home{
+    background-image: url('/assets/images/personagem-disney.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 100vh;
+  
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to bottom , rgba(0,0,0,0.5) 60%, rgba(0,0,0,1) );
+    }
+
+    .title{
+        font-size: 0px;
+    }
+}
+
