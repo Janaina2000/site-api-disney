@@ -79,6 +79,29 @@
   margin-top: 2rem;
 }
 
+.c-category {
+  background: var(--color-black);
+  padding: 2rem 0;
+}
+.c-category .title-category {
+  position: relative;
+  color: var(--color-white);
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-bottom: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+.c-category .title-category::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1rem;
+  background: linear-gradient(to right, var(--color-primary), var(--color-black) 70%);
+  opacity: 0.9;
+}
+
 .container {
   width: 100%; /* O container ocupa toda a largura disponível */
   max-width: 1200px; /* Largura máxima do container */

@@ -1,15 +1,16 @@
 @import './home/header.scss';
 @import './home/hero.scss';
+@import './home/category.scss';
 
-  .container {
+.container {
     width: 100%;         /* O container ocupa toda a largura disponível */
     max-width: 1200px;   /* Largura máxima do container */
     margin: 0 auto;      /* Centraliza o container horizontalmente */
     padding: 0 20px;     /* Adiciona um espaço interno de 20px nas laterais */
     box-sizing: border-box; /* Inclui padding e borda no cálculo da largura total */
-  }
+}
 
-  .button-primary{
+.button-primary{
     color: var(--color-white);
     font-size: 1rem;
     font-weight: 600;
@@ -17,7 +18,6 @@
     padding: 0.5rem 1.25rem;
     border-radius: 0.25rem;
     text-align: center;
-    
 }
   
 
