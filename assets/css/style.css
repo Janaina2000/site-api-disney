@@ -1,33 +1,4 @@
 @charset "UTF-8";
-body {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: none;
-  position: relative;
-  font-family: "Montserrat", serif;
-}
-
-h1, h2, h3, h4, h5, h6, p, span, a, li {
-  margin: 0;
-  padding: 0;
-  color: black;
-  font-size: 100%;
-  font-weight: normal;
-  line-height: normal;
-  list-style-type: none;
-  text-transform: none;
-  text-decoration: none;
-}
-
-.container {
-  width: 100%; /* O container ocupa toda a largura disponível */
-  max-width: 1200px; /* Largura máxima do container */
-  margin: 0 auto; /* Centraliza o container horizontalmente */
-  padding: 0 20px; /* Adiciona um espaço interno de 20px nas laterais */
-  box-sizing: border-box; /* Inclui padding e borda no cálculo da largura total */
-}
-
 .c-header {
   position: absolute;
   top: 0;
@@ -52,26 +23,19 @@ h1, h2, h3, h4, h5, h6, p, span, a, li {
   gap: 3rem;
 }
 .c-header .container .menu__item a {
-  color: white;
+  color: var(--color-white);
   font-size: 1rem;
   font-weight: 600;
-}
-.c-header .container .menu .button {
-  color: white;
-  font-size: 1rem;
-  font-weight: 600;
-  background: #e60023;
-  padding: 0.5rem 1.25rem;
-  border-radius: 0.25rem;
 }
 
 .c-home {
-  background-image: url("/assets/images/personagem-disney.jpg");
+  background-image: url("/assets/images/inicio.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
   height: 100vh;
-  filter: contrast(1.2) saturate(1.3) brightness(0.6);
+  position: relative;
+  padding: 3rem 0;
 }
 .c-home::before {
   content: "";
@@ -80,10 +44,57 @@ h1, h2, h3, h4, h5, h6, p, span, a, li {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.9));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) -30%, rgb(0, 0, 0));
+  z-index: 0;
+}
+.c-home .container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .c-home .title {
   font-size: 0px;
+}
+.c-home .subtitle {
+  color: var(--color-white);
+  font-size: 2.5rem;
+  font-weight: 600;
+  width: 100%;
+  max-width: 568px;
+  margin-top: 5rem;
+}
+.c-home .description {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--color-white);
+  opacity: 0.5;
+  margin-top: 1.5rem;
+  width: 100%;
+  max-width: 410px;
+}
+.c-home .button-primary {
+  width: 9rem;
+  margin-top: 2rem;
+}
+
+.container {
+  width: 100%; /* O container ocupa toda a largura disponível */
+  max-width: 1200px; /* Largura máxima do container */
+  margin: 0 auto; /* Centraliza o container horizontalmente */
+  padding: 0 20px; /* Adiciona um espaço interno de 20px nas laterais */
+  box-sizing: border-box; /* Inclui padding e borda no cálculo da largura total */
+}
+
+.button-primary {
+  color: var(--color-white);
+  font-size: 1rem;
+  font-weight: 600;
+  background: var(--color-primary);
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.25rem;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
