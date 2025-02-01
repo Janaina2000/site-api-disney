@@ -101,6 +101,25 @@
   background: linear-gradient(to right, var(--color-primary), var(--color-black) 70%);
   opacity: 0.9;
 }
+.c-category__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  margin-bottom: 2.5rem;
+  gap: 1rem;
+}
+.c-category__header p {
+  color: var(--color-white);
+  font-weight: 500;
+  opacity: 0.5;
+}
+.c-category__header .buttons-category {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1.25rem;
+}
 
 .container {
   width: 100%; /* O container ocupa toda a largura disponível */

@@ -1,8 +1,8 @@
-.c-category{
+.c-category {
     background: var(--color-black);
     padding: 2rem 0;
 
-    .title-category{
+    .title-category {
 
         position: relative;
         color: var(--color-white);
@@ -11,7 +11,7 @@
         padding-bottom: 1.25rem;
         margin-bottom: 2.5rem;
 
-        &::before{
+        &::before {
 
             content: '';
             position: absolute;
@@ -19,9 +19,35 @@
             left: 0;
             width: 100%;
             height: 0.1rem;
-            background: linear-gradient(to right, var(--color-primary), var(--color-black) 70%) ;
+            background: linear-gradient(to right, var(--color-primary), var(--color-black) 70%);
             opacity: 0.9;
 
         }
     }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        margin-bottom: 2.5rem;
+        gap: 1rem;
+
+        p {
+
+            color: var(--color-white);
+            font-weight: 500;
+            opacity: 0.5;
+
+        }
+
+        .buttons-category {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            gap: 1.25rem;
+        }
+    }
+
+
 }
