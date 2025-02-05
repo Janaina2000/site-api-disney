@@ -123,6 +123,7 @@
 .c-category__body {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1rem;
 }
 .c-category__body .card__figure {
   position: relative;
