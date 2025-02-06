@@ -60,16 +60,16 @@
                     <p>Mostrar:</p>
 
                     <div class="buttons-category">
-                        <button class="button-primary">Todos</button>
-                        <button class="button-primary">Lançamentos</button>
-                        <button class="button-primary">Filmes</button>
-                        <button class="button-primary">Séries</button>
+                        <button type="button" class="button-primary" onclick="listTodos()">Todos</button>
+                        <button type="button"  class="button-primary" onclick="listFilmes()">Filmes</button>
+                        <button type="button"  class="button-primary" onclick="listTv()">Programas de TV</button>
+                        <button type="button"  class="button-primary" onclick="listJogos()">Jogos</button>
                     </div>
 
                 </div>
 
-                <h3 class="title-category">
-                        Lançamentos
+                <h3 class="title-category" id="title-category">
+                        Todos personagens
                 </h3>
 
                 <div class="loading" id="loading"></div>
