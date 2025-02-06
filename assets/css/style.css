@@ -161,6 +161,56 @@
 .c-category__body .card:hover .card__figure {
   border-color: var(--color-primary);
 }
+.c-category__body .card:hover .card__title {
+  color: var(--color-primary);
+}
+.c-category .loading {
+  position: relative;
+  display: block;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 9999px;
+  background: var(--color-primary);
+  margin: 2rem auto;
+  animation: loading 1s alternate infinite;
+  display: none;
+}
+.c-category .loading::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -1rem;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 9999px;
+  background: var(--color-primary);
+  animation: loading 1.5s alternate infinite;
+}
+.c-category .loading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -1rem;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 9999px;
+  background: var(--color-primary);
+  animation: loading 1.25s alternate infinite;
+}
+@keyframes loading {
+  0%, 100% {
+    transform: translateY(-0.5rem);
+  }
+  25% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0.5rem);
+  }
+  75% {
+    transform: translateY(0);
+  }
+}
 
 .c-footer {
   background-color: var(--color-gray);

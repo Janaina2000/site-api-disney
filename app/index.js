@@ -1,7 +1,9 @@
-const api_url = 'https://api.disneyapi.dev/character';
+const api_url = 'https://api.disneyapi.dev/character?pageSize=300';
+const loading = document.getElementById('loading')
 let disney = []
 
 async function fetchData() {
+    toogleLoading();
     try{
         const response = await fetch(api_url);
 
@@ -38,4 +40,15 @@ function displayMovies(movies){
         container.innerHTML += card;
 
     });
+
+    toogleLoading();
+}
+
+function toogleLoading(){
+
+    if(loading.style.display == "block" || loading.style.display == " "){
+          loading.style.display = 'none';
+    }else{
+        loading.style.display = 'block'
+    }
 }
