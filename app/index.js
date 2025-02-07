@@ -170,3 +170,11 @@ function prev() {
         }
     }
 }
+
+function numberPage(number){
+    if(disney){
+        urlPerson = 'http://api.disneyapi.dev/character?page='+number+'&pageSize=30'
+        
+        fetchData(urlPerson);
+    }
+}
