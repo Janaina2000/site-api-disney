@@ -1,6 +1,7 @@
 const api_url = 'https://api.disneyapi.dev/character?pageSize=40';
 const loading = document.getElementById('loading');
 const titlecat = document.getElementById('title-category')
+const searchInput = document.getElementById('search');
 let disney = []
 
 async function fetchData() {
@@ -33,17 +34,23 @@ function displayMovies(movies) {
     let content = '';
     let card = ''
 
-    movies.forEach(item => {
-        card = `<div class="card" id="card">
-                        <figure class="card__figure">
-                            <img src="${item.imageUrl}" alt="${item.name}" />
-                        </figure>
-                        <h4 class="card__title">${item.name}</h4>
-                        <span class="card__date">${formatCalendar(item.updatedAt)}</span>
-                    </div>`;
+    if(movies.length > 0){
+        movies.forEach(item => {
+            card = `<div class="card" id="card">
+                            <figure class="card__figure">
+                                <img src="${item.imageUrl}" alt="${item.name}" />
+                            </figure>
+                            <h4 class="card__title">${item.name}</h4>
+                            <span class="card__date">${formatCalendar(item.updatedAt)}</span>
+                        </div>`;
+    
+            content += card;
+        });
+    }else{
+        content = '<span style="color:var(--color-white); display:block; text-align: center; grid-column: span 6; ">Ops, nenhum resultado encontrado!<span>'
+    }
 
-        content += card;
-    });
+   
 
     setTimeout(()=>{
     container.innerHTML = content;
@@ -104,3 +111,20 @@ function toogleLoading() {
         loading.style.display = 'block'
     }
 }
+
+function onEnterPress(event) {
+    // Verifica se a tecla pressionada foi o Enter (código 13)
+    if (event.key === 'Enter') {
+        let result = []
+       let search  = event.target.value
+       if(search != ' '){
+         result = disney.filter( item => item.name.toLowerCase().includes(search))
+       }
+       toogleLoading();
+       displayMovies(result);
+      
+
+    }
+}
+
+searchInput.addEventListener('keydown', onEnterPress)

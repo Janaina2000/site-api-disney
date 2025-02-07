@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,18 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/assets/css/reset.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="/assets/css/variavels.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css" media="screen" />
 </head>
+
 <body>
     <header class="c-header">
         <div class="container">
             <a href="/" class="link-logo">
-                    <img src="./assets/images/logo-white.png" alt="" class="logo">
+                <img src="./assets/images/logo-white.png" alt="" class="logo">
             </a>
             <nav class="menu">
                 <li class="menu__item">
@@ -38,7 +41,7 @@
                 <a class="button-primary">Login</a>
             </nav>
         </div>
-        
+
     </header>
     <main>
         <section class="c-home">
@@ -46,7 +49,8 @@
                 <h1 class="title">Disney</h1>
 
                 <h2 class="subtitle">Bem-vindo ao nosso catálogo Disney!</h2>
-                <p class="description"> Encontre todos os filmes que marcaram gerações e mergulhe no universo mágico de personagens e histórias inesquecíveis.</p>
+                <p class="description"> Encontre todos os filmes que marcaram gerações e mergulhe no universo mágico de
+                    personagens e histórias inesquecíveis.</p>
                 <a class="button-primary">Começar</a>
             </div>
         </section>
@@ -59,23 +63,26 @@
 
                     <p>Mostrar:</p>
 
-                    <div class="buttons-category">
-                        <button type="button" class="button-primary" onclick="listTodos()">Todos</button>
-                        <button type="button"  class="button-primary" onclick="listFilmes()">Filmes</button>
-                        <button type="button"  class="button-primary" onclick="listTv()">Programas de TV</button>
-                        <button type="button"  class="button-primary" onclick="listJogos()">Jogos</button>
+                    <div class="container-filter">
+                        <div class="buttons-category">
+                            <button type="button" class="button-primary" onclick="listTodos()">Todos</button>
+                            <button type="button" class="button-primary" onclick="listFilmes()">Filmes</button>
+                            <button type="button" class="button-primary" onclick="listTv()">Programas de TV</button>
+                            <button type="button" class="button-primary" onclick="listJogos()">Jogos</button>
+                        </div>
+                        <input type="search" id="search" placeholder="Pesquisar.."  />
                     </div>
 
                 </div>
 
                 <h3 class="title-category" id="title-category">
-                        Todos personagens
+                    Todos personagens
                 </h3>
 
                 <div class="loading" id="loading"></div>
 
                 <div class="c-category__body" id="category-body">
-                 
+
                 </div>
 
             </div>
@@ -91,41 +98,50 @@
             </a>
             <div class="c-footer__body">
                 <ul class="list">
-                    <li><h2 class="list-title">Home</h2></li>
+                    <li>
+                        <h2 class="list-title">Home</h2>
+                    </li>
                     <li><a href="#" class="list-item">Inicio</a></li>
                     <li><a href="#" class="list-item">Filmes</a></li>
                     <li><a href="#" class="list-item">Contato</a></li>
                 </ul>
                 <ul class="list">
-                    <li><h2 class="list-title">Quem somos</h2></li>
+                    <li>
+                        <h2 class="list-title">Quem somos</h2>
+                    </li>
                     <li><a href="#" class="list-item">Sobre</a></li>
                     <li><a href="#" class="list-item">Missão</a></li>
                 </ul>
                 <ul class="list">
-                    <li><h2 class="list-title">Política de privacidade</h2></li>
+                    <li>
+                        <h2 class="list-title">Política de privacidade</h2>
+                    </li>
                     <li><a href="#" class="list-item">Privacidade</a></li>
                     <li><a href="#" class="list-item">Termos de Uso</a></li>
                 </ul>
                 <ul class="list">
-                    <li><h2 class="list-title">Contato</h2></li>
+                    <li>
+                        <h2 class="list-title">Contato</h2>
+                    </li>
                     <li><a href="#" class="list-item">(11) 11111-1111</a></li>
                     <li><a href="#" class="list-item">contato@disney.com.br</a></li>
                     <li><a href="#" class="list-item">Contato</a></li>
                 </ul>
                 <div>
                     <a class="button-primary">Login</a>
-                  
+
                 </div>
-              
+
             </div>
             <div class="c-footer__sing">
                 <span>© Disney 2025</span>
             </div>
         </div>
 
-       
-    </a>
+
+        </a>
     </footer>
     <script src="./app/index.js" />
 </body>
+
 </html>
