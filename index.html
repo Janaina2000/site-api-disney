@@ -70,14 +70,25 @@
                             <button type="button" class="button-primary" onclick="listTv()">Programas de TV</button>
                             <button type="button" class="button-primary" onclick="listJogos()">Jogos</button>
                         </div>
-                        <input type="search" id="search" placeholder="Pesquisar.."  />
+                        <input type="search" id="search" placeholder="Pesquisar.." />
                     </div>
 
                 </div>
 
-                <h3 class="title-category" id="title-category">
-                    Todos personagens
-                </h3>
+                <div class="container__title">
+
+                    <h3 class="title-category" id="title-category">
+                        Todos personagens
+                    </h3>
+                    <div class="c-category__ordem">
+
+                        <p>ordem por:</p>
+                        <button type="button" class="button-primary" onclick="listTodos()"> Nome </button>
+                    </div>
+
+                </div>
+
+
 
                 <div class="loading" id="loading"></div>
 
@@ -86,11 +97,13 @@
                 </div>
 
                 <div class="paginate">
-                    <button type="button" class="prev" id="prev" onclick="prev()"><</button>
-                    <div class="number" id="number">
-                        
-                    </div>
-                    <button type="button" class="next" id="next" onclick="next()">></button>
+                    <button type="button" class="prev" id="prev" onclick="prev()">
+                        <
+                    </button>
+                            <div class="number" id="number">
+
+                            </div>
+                            <button type="button" class="next" id="next" onclick="next()">></button>
                 </div>
 
             </div>
