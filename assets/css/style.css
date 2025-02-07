@@ -249,7 +249,7 @@
   font-weight: 800;
 }
 .c-category .paginate .next:hover, .c-category .paginate .prev:hover {
-  background-color: var(--color-primary);
+  background-color: rgb(198, 198, 198);
 }
 .c-category .paginate .number {
   display: flex;
@@ -266,6 +266,9 @@
   border: 1px solid var(--color-white);
   border-radius: 0.25rem;
   font-size: 0.65rem;
+}
+.c-category .paginate .number__item.active {
+  background-color: var(--color-primary);
 }
 
 .c-footer {

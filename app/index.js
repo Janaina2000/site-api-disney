@@ -54,7 +54,7 @@ function displayMovies(movies) {
             numberpaginate.innerHTML = `<button class="number__item" onclick="numberPage(1)">1</button>`;
             numberpaginate.innerHTML += `<button class="number__item" onclick="numberPage(${contador-1})">${contador-1}</button>`
         }
-        numberpaginate.innerHTML +=  `<button class="number__item" onclick="numberPage(${contador})">${contador}</button>`;
+        numberpaginate.innerHTML +=  `<button class="number__item active" onclick="numberPage(${contador})">${contador}</button>`;
 
         if(contador < data.info.totalPages){
                         numberpaginate.innerHTML += `<button class="number__item" onclick="numberPage(${contador+1})">${contador+1}</button>`
